@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# LocalPad 🚀
+## The Developer's Command Center for Local Ports
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Stop juggling `localhost` tabs. **LocalPad** is a premium Chrome extension that centralizes your local development environment. Manage your frontends, backends, and infrastructure services with single-tap access.
 
-Currently, two official plugins are available:
+![LocalPad Screenshot](https://github.com/naumanch969/localpad/raw/main/public/icons/icon128.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### ✨ Features
+- **My Pads**: Create custom labels and notes for your active development projects.
+- **Multi-Port Support**: Each Pad can track multiple endpoints (e.g., API + Frontend).
+- **Common Ports Library**: Instant access to standard infra ports (MongoDB, Redis, Postgres, Kafka, RabbitMQ, Docker, etc.).
+- **Smart Search**: Filter through your project list with instant, high-performance search.
+- **Privacy First**: Everything is stored locally on your machine using Chrome Storage API. No data ever leaves your browser.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛠️ Tech Stack
+- **Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS (Custom Glassmorphism Design)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🚀 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+#### **For Users (Manual Installation)**
+1. Download the [latest release](https://github.com/naumanch969/localpad/releases).
+2. Open **Chrome** and go to `chrome://extensions/`.
+3. Enable **Developer Mode** (top right toggle).
+4. Click **Load Unpacked** and select the `dist` folder.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+#### **For Developers (Development Environment)**
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/naumanch969/localpad.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the dev server (HMR):
+   ```bash
+   npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🛡️ Privacy Policy
+LocalPad respects your privacy. No data is collected or shared. Read our full [Privacy Policy](./PRIVACY_POLICY.md).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📄 License
+MIT License. Created with ❤️ by naumanch969.
