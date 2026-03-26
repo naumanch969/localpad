@@ -55,4 +55,4 @@ Stop juggling `localhost` tabs. **LocalPad** is a premium Chrome extension that 
 LocalPad respects your privacy. No data is collected or shared. Read our full [Privacy Policy](./PRIVACY_POLICY.md).
 
 ### 📄 License
-MIT License. Created with ❤️ by naumanch969.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
